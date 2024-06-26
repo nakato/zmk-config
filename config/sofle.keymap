@@ -19,6 +19,7 @@
 #define ADJUST 3
 #define QWERTY 4
 #define BROWSER 5
+#define FUBAR 6
 
 / {
 
@@ -191,7 +192,7 @@
             label = "ADJUST";
             bindings = <
 &out OUT_TOG      &bt BT_SEL 0    &bt BT_SEL 1    &bt BT_SEL 2    &bt BT_SEL 3    &bt BT_SEL 4                            &none &none &none &none &none &none
-&none             &tog QWERTY     &none           &none           &none           &none                                   &none &none &none &none &none &none
+&tog FUBAR        &tog QWERTY     &none           &none           &none           &none                                   &none &none &none &none &none &none
 &ext_power EP_TOG &none           &none           &none           &tog BROWSER    &none                                   &none &none &none &none &none &none
 &bt BT_CLR        &none           &none           &none           &none           &none            &none           &none  &none &none &none &none &none &none
                                   &none           &none           &none           &none            &none           &none  &none &none &none &none
@@ -232,6 +233,18 @@
 &none        &kp PG_UP &kp PG_DN  &web_prev   &web_next   &none                &none  &none &none &none &none &none
 &kp LEFT     &kp RIGHT &none      &web_m_prev &web_m_next &none  &none   &none &none  &none &none &none &none &none
                        &none      &none       &none       &trans &none   &none &trans &none &none &none
+            >;
+            sensor-bindings = <&inc_dec_kp PG_DN PG_UP &inc_dec_kp PG_UP PG_DN>;
+        };
+
+        fubar_layer {
+            label = "FUBAR";
+            bindings = <
+&tog FUBAR   &none     &none          &none       &none       &none                &none  &none &none &none &none &none
+&kp R        &kp E     &kp I          &kp S       &kp U       &kp B                &none  &none &none &none &none &none
+&none        &none     &none          &none       &none       &none                &none  &none &none &none &none &none
+&none        &none     &none          &none       &none       &none  &none   &none &none  &none &none &none &none &none
+                       &kp LA(SYSREQ) &none       &none       &trans &none   &none &trans &none &none &none
             >;
             sensor-bindings = <&inc_dec_kp PG_DN PG_UP &inc_dec_kp PG_UP PG_DN>;
         };
