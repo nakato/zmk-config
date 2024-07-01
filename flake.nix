@@ -3,7 +3,7 @@
     nixpkgs.url = "github:NixOS/nixpkgs/nixpkgs-unstable";
 
     zmk-nix = {
-      url = "github:nakato-forks/zmk-nix/DfuMethod";
+      url = "github:nakato-forks/zmk-nix/BlockWrite";
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };
@@ -31,7 +31,7 @@
         };
       };
 
-      flash = zmk-nix.packages.${system}.flash-nicenano-dfu.override { inherit firmware; };
+      flash = zmk-nix.packages.${system}.flashBlock.override { inherit firmware; };
       update = zmk-nix.packages.${system}.update;
     });
 

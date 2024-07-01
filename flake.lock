@@ -29,16 +29,16 @@
         ]
       },
       "locked": {
-        "lastModified": 1719381284,
-        "narHash": "sha256-73uChv/SRu5DTuxAYddp2XWF+AAlb10nbXrNxfLA0mg=",
+        "lastModified": 1719793793,
+        "narHash": "sha256-iM+7WlcGGQWdbGgN1UpGp1kuHQD6YnJxjHDeW9oevRA=",
         "owner": "nakato-forks",
         "repo": "zmk-nix",
-        "rev": "9392a048aa0434667ad1a8a82faae6558fa80b5a",
+        "rev": "16d78a376d659e9f63b27ac3eb9bbb6b52af8166",
         "type": "github"
       },
       "original": {
         "owner": "nakato-forks",
-        "ref": "DfuMethod",
+        "ref": "BlockWrite",
         "repo": "zmk-nix",
         "type": "github"
       }
